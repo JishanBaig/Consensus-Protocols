@@ -1,0 +1,10 @@
+tarun 20000
+jishan 1500
+abhilash 3000
+nirav 3000
+deepak 2000
+satya 1000
+dipesh 1000
+vivek 2000
+abhil 3000
+siddharth 2000
