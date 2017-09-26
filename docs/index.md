@@ -1,5 +1,5 @@
-2PC Protocol-
-Design-
+## 2PC Protocol-
+### Design-
 First requested node will get the transaction to be performes as a input string from the user.Then the transaction string is sent to coordinator with prepared tagged message. After getting the prepared message coordinator will ask other nodes to prepare with prepare message.Other nodes will send prepared message with either 0 or 1 bit, showing their agreement or disagreement. Prepared with 0 represents disagreement and prepared with 1 represents agreement.If all other processes agree for prepared then only coordinator sends the commit message containign the transaction request string to every other process otherwise it sends commit with bit 0 embedded in it that represents abort operation.
 After getting the commit message, every process performs the transaction in store.txt file and commits.Or else getting the abort message transaction is aborted.  
 
@@ -27,7 +27,8 @@ do commit
 }
 
 
-3PC Protocol-
+## 3PC Protocol-
+### Design
 First requested node will get the transaction to be performes as a input string from the user.Then the transaction string is sent to coordinator with prepared tagged message. After getting the prepared message coordinator will ask other nodes to prepare with prepare message.Other nodes will send prepared message with either 0 or 1 bit, showing their agreement or disagreement. Prepared with 0 represents disagreement and prepared with 1 represents agreement.
 If all other processes agree for prepared then only coordinator sends the precommit message  containing message bit 1 to every other process otherwise it sends precommit with bit 0 embedded in it that represents abort operation to all other processes including the requesting process and every process gets aborted.
 After getting precommit message with bit value 1, the other processes sends acknowledgement message with agreement or disagrrement. Acknowledgement message with 0 represents disagreement and  with 1 represents agreement.
@@ -63,7 +64,8 @@ do commit
 
 
 
-Byzantine Agreement Protocol-
+## Byzantine Agreement Protocol-
+### Design
 First requested node will get the transaction to be performes as a input string from the user.Then the transaction string is sent to coordinator with prepared tagged message. After getting the prepared message coordinator will ask other nodes to prepare with prepare message.Other nodes will send prepared message with either 0 or 1 bit, showing their agreement or disagreement. Prepared with 0 represents disagreement and prepared with 1 represents agreement.
 All getting all the bits coordinator decides for one bit according to the majority and sends it to all the processes to perform byzantine.
 All the processes execute byzantine protocol to reach a common agreement for deciding final decision bit. In step 1, the bits are sent by all the processes to all other processes except the coordinator.then the bits are received by all the processes. Among the received bits majority bits are found out.thus obtained bit is again sent to all other processes and this loops untill (faulty_processes+1) times.
