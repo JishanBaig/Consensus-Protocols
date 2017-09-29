@@ -26,6 +26,8 @@ receive commit from coordinator
 do commit
 }
 
+![](./Picture1.png)
+
 
 ## 3PC Protocol-
 ### Design
@@ -61,6 +63,8 @@ send acknoledgement to coordinator
 receive commit from coordinator
 do commit
 }
+
+![](./Picture2.png)
 
 
 
@@ -110,5 +114,6 @@ receive commit from coordinator
 do commit
 }
 
+![](./Picture3.png)
 
 
