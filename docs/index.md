@@ -26,6 +26,8 @@ receive commit from coordinator
 do commit
 }
 
+
+
 ![](./Picture1.png)
 
 
@@ -63,6 +65,8 @@ send acknoledgement to coordinator
 receive commit from coordinator
 do commit
 }
+
+
 
 ![](./Picture2.png)
 
@@ -113,6 +117,8 @@ send byz_end to coordinator
 receive commit from coordinator
 do commit
 }
+
+
 
 ![](./Picture3.png)
 
